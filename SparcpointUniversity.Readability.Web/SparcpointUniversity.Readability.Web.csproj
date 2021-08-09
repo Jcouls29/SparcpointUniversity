@@ -8,4 +8,9 @@
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.1.5" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\SparcpointUniversity.Readability.Abstractions\SparcpointUniversity.Readability.Abstractions.csproj" />
+    <ProjectReference Include="..\SparcpointUniversity.Readability.InMemory\SparcpointUniversity.Readability.InMemory.csproj" />
+  </ItemGroup>
+
 </Project>

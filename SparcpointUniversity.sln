@@ -7,6 +7,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "No. 1 - Readability", "No. 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SparcpointUniversity.Readability.Web", "SparcpointUniversity.Readability.Web\SparcpointUniversity.Readability.Web.csproj", "{CF32509C-1FE1-44EC-A6EF-668B94BB8E18}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SparcpointUniversity.Readability.Abstractions", "SparcpointUniversity.Readability.Abstractions\SparcpointUniversity.Readability.Abstractions.csproj", "{BD66C639-D429-467E-9E38-AA5669ED574F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SparcpointUniversity.Readability.InMemory", "SparcpointUniversity.Readability.InMemory\SparcpointUniversity.Readability.InMemory.csproj", "{5DAA7B29-697C-415D-A92E-D7AD57993C43}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -17,12 +21,22 @@ Global
 		{CF32509C-1FE1-44EC-A6EF-668B94BB8E18}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CF32509C-1FE1-44EC-A6EF-668B94BB8E18}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CF32509C-1FE1-44EC-A6EF-668B94BB8E18}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BD66C639-D429-467E-9E38-AA5669ED574F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BD66C639-D429-467E-9E38-AA5669ED574F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BD66C639-D429-467E-9E38-AA5669ED574F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BD66C639-D429-467E-9E38-AA5669ED574F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5DAA7B29-697C-415D-A92E-D7AD57993C43}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5DAA7B29-697C-415D-A92E-D7AD57993C43}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5DAA7B29-697C-415D-A92E-D7AD57993C43}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5DAA7B29-697C-415D-A92E-D7AD57993C43}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{CF32509C-1FE1-44EC-A6EF-668B94BB8E18} = {26898757-2BD4-40D1-9BEC-5AAB6D95BA80}
+		{BD66C639-D429-467E-9E38-AA5669ED574F} = {26898757-2BD4-40D1-9BEC-5AAB6D95BA80}
+		{5DAA7B29-697C-415D-A92E-D7AD57993C43} = {26898757-2BD4-40D1-9BEC-5AAB6D95BA80}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {ADBC650E-E152-43FF-BBCD-394FBBCA4003}
