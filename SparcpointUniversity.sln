@@ -5,11 +5,21 @@ VisualStudioVersion = 16.0.31410.357
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "No. 1 - Readability", "No. 1 - Readability", "{26898757-2BD4-40D1-9BEC-5AAB6D95BA80}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SparcpointUniversity.Readability.Web", "SparcpointUniversity.Readability.Web\SparcpointUniversity.Readability.Web.csproj", "{CF32509C-1FE1-44EC-A6EF-668B94BB8E18}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SparcpointUniversity.Readability.Web", "SparcpointUniversity.Readability.Web\SparcpointUniversity.Readability.Web.csproj", "{CF32509C-1FE1-44EC-A6EF-668B94BB8E18}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SparcpointUniversity.Readability.Abstractions", "SparcpointUniversity.Readability.Abstractions\SparcpointUniversity.Readability.Abstractions.csproj", "{BD66C639-D429-467E-9E38-AA5669ED574F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SparcpointUniversity.Readability.Abstractions", "SparcpointUniversity.Readability.Abstractions\SparcpointUniversity.Readability.Abstractions.csproj", "{BD66C639-D429-467E-9E38-AA5669ED574F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SparcpointUniversity.Readability.InMemory", "SparcpointUniversity.Readability.InMemory\SparcpointUniversity.Readability.InMemory.csproj", "{5DAA7B29-697C-415D-A92E-D7AD57993C43}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SparcpointUniversity.Readability.InMemory", "SparcpointUniversity.Readability.InMemory\SparcpointUniversity.Readability.InMemory.csproj", "{5DAA7B29-697C-415D-A92E-D7AD57993C43}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "No. 2 - Basics of Interfaces", "No. 2 - Basics of Interfaces", "{BB048F3F-67D8-449F-83D6-5E05FDF93555}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SparcpointUniversity.InterfaceBasics.Web", "SparcpointUniversity.InterfaceBasics.Web\SparcpointUniversity.InterfaceBasics.Web.csproj", "{599F6757-12F2-4C83-BCCC-722F08AA1FA0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SparcpointUniversity.InterfaceBasics.Sql.Abstractions", "SparcpointUniversity.InterfaceBasics.Sql\SparcpointUniversity.InterfaceBasics.Sql.Abstractions.csproj", "{81256533-BAF7-40F2-B58B-725C35DD5C80}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SparcpointUniversity.InterfaceBasics.Sql.SqlServer", "SparcpointUniversity.InterfaceBasics.Sql.SqlServer\SparcpointUniversity.InterfaceBasics.Sql.SqlServer.csproj", "{E3477DE4-C531-44F5-9AD8-EADF98C89614}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SparcpointUniversity.InterfaceBasics.Extensions.Sql", "SparcpointUniversity.InterfaceBasics.Extensions.Sql\SparcpointUniversity.InterfaceBasics.Extensions.Sql.csproj", "{F6C294B4-7059-407C-9011-8CD2EAADA4D2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -29,6 +39,22 @@ Global
 		{5DAA7B29-697C-415D-A92E-D7AD57993C43}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5DAA7B29-697C-415D-A92E-D7AD57993C43}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5DAA7B29-697C-415D-A92E-D7AD57993C43}.Release|Any CPU.Build.0 = Release|Any CPU
+		{599F6757-12F2-4C83-BCCC-722F08AA1FA0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{599F6757-12F2-4C83-BCCC-722F08AA1FA0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{599F6757-12F2-4C83-BCCC-722F08AA1FA0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{599F6757-12F2-4C83-BCCC-722F08AA1FA0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{81256533-BAF7-40F2-B58B-725C35DD5C80}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{81256533-BAF7-40F2-B58B-725C35DD5C80}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{81256533-BAF7-40F2-B58B-725C35DD5C80}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{81256533-BAF7-40F2-B58B-725C35DD5C80}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E3477DE4-C531-44F5-9AD8-EADF98C89614}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E3477DE4-C531-44F5-9AD8-EADF98C89614}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E3477DE4-C531-44F5-9AD8-EADF98C89614}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E3477DE4-C531-44F5-9AD8-EADF98C89614}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F6C294B4-7059-407C-9011-8CD2EAADA4D2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F6C294B4-7059-407C-9011-8CD2EAADA4D2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F6C294B4-7059-407C-9011-8CD2EAADA4D2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F6C294B4-7059-407C-9011-8CD2EAADA4D2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -37,6 +63,10 @@ Global
 		{CF32509C-1FE1-44EC-A6EF-668B94BB8E18} = {26898757-2BD4-40D1-9BEC-5AAB6D95BA80}
 		{BD66C639-D429-467E-9E38-AA5669ED574F} = {26898757-2BD4-40D1-9BEC-5AAB6D95BA80}
 		{5DAA7B29-697C-415D-A92E-D7AD57993C43} = {26898757-2BD4-40D1-9BEC-5AAB6D95BA80}
+		{599F6757-12F2-4C83-BCCC-722F08AA1FA0} = {BB048F3F-67D8-449F-83D6-5E05FDF93555}
+		{81256533-BAF7-40F2-B58B-725C35DD5C80} = {BB048F3F-67D8-449F-83D6-5E05FDF93555}
+		{E3477DE4-C531-44F5-9AD8-EADF98C89614} = {BB048F3F-67D8-449F-83D6-5E05FDF93555}
+		{F6C294B4-7059-407C-9011-8CD2EAADA4D2} = {BB048F3F-67D8-449F-83D6-5E05FDF93555}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {ADBC650E-E152-43FF-BBCD-394FBBCA4003}
