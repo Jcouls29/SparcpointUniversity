@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 namespace SparcpointUniversity.InterfaceBasics.Extensions.Sql
 {
     internal class WithTransactionSqlExecutor : ISqlExecutor
-    {
+    { 
         private readonly ISqlExecutor _InnerExecutor;
         private readonly IsolationLevel? _IsolationLevel;
 
@@ -31,7 +31,7 @@ namespace SparcpointUniversity.InterfaceBasics.Extensions.Sql
 
                 using (IDbTransaction innerTrans = BeginTransaction(dbConn))
                 {
-                    T result = executor(dbConn, dbTrans);
+                    T result = executor(dbConn, innerTrans);
                     dbTrans.Commit();
                     return result;
                 }
@@ -50,7 +50,7 @@ namespace SparcpointUniversity.InterfaceBasics.Extensions.Sql
 
                 using (IDbTransaction innerTrans = BeginTransaction(dbConn))
                 {
-                    executor(dbConn, dbTrans);
+                    executor(dbConn, innerTrans);
                     dbTrans.Commit();
                 }
             });
@@ -65,7 +65,7 @@ namespace SparcpointUniversity.InterfaceBasics.Extensions.Sql
 
                 using (IDbTransaction innerTrans = BeginTransaction(dbConn))
                 {
-                    T result = await executor(dbConn, dbTrans);
+                    T result = await executor(dbConn, innerTrans);
                     dbTrans.Commit();
                     return result;
                 }
@@ -84,7 +84,7 @@ namespace SparcpointUniversity.InterfaceBasics.Extensions.Sql
 
                 using (IDbTransaction innerTrans = BeginTransaction(dbConn))
                 {
-                    await executor(dbConn, dbTrans);
+                    await executor(dbConn, innerTrans);
                     dbTrans.Commit();
                 }
             });
