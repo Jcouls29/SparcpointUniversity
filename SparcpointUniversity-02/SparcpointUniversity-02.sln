@@ -1,0 +1,33 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31410.357
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "SparcpointUniversity.Database", "SparcpointUniversity.Database\SparcpointUniversity.Database.sqlproj", "{8CC4A63B-33C2-49C3-8AB0-3EFBFDD2BA75}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SparcpointUniversity.Console", "SparcpointUniversity.Console\SparcpointUniversity.Console.csproj", "{73B2D3BF-E032-41F4-AC0C-9352388D5A47}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8CC4A63B-33C2-49C3-8AB0-3EFBFDD2BA75}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8CC4A63B-33C2-49C3-8AB0-3EFBFDD2BA75}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8CC4A63B-33C2-49C3-8AB0-3EFBFDD2BA75}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{8CC4A63B-33C2-49C3-8AB0-3EFBFDD2BA75}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8CC4A63B-33C2-49C3-8AB0-3EFBFDD2BA75}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8CC4A63B-33C2-49C3-8AB0-3EFBFDD2BA75}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{73B2D3BF-E032-41F4-AC0C-9352388D5A47}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{73B2D3BF-E032-41F4-AC0C-9352388D5A47}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{73B2D3BF-E032-41F4-AC0C-9352388D5A47}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{73B2D3BF-E032-41F4-AC0C-9352388D5A47}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {30B27EDB-E1A2-4BDF-8DB9-74B9D0F716A7}
+	EndGlobalSection
+EndGlobal
