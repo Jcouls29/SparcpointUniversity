@@ -5,4 +5,20 @@
     <TargetFramework>net5.0</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Remove="ewi4pqz4.nm0~" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Dapper" Version="2.0.90" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="5.0.2" />
+    <PackageReference Include="System.Data.SqlClient" Version="4.8.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\SparcpointUniversity.Extensions.Sql\SparcpointUniversity.Extensions.Sql.csproj" />
+    <ProjectReference Include="..\SparcpointUniversity.Sql.Abstractions\SparcpointUniversity.Sql.Abstractions.csproj" />
+    <ProjectReference Include="..\SparcpointUniversity.Sql.SqlServer\SparcpointUniversity.Sql.SqlServer.csproj" />
+  </ItemGroup>
+
 </Project>

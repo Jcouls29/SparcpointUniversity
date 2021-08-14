@@ -5,7 +5,13 @@ VisualStudioVersion = 16.0.31410.357
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "SparcpointUniversity.Database", "SparcpointUniversity.Database\SparcpointUniversity.Database.sqlproj", "{8CC4A63B-33C2-49C3-8AB0-3EFBFDD2BA75}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SparcpointUniversity.Console", "SparcpointUniversity.Console\SparcpointUniversity.Console.csproj", "{73B2D3BF-E032-41F4-AC0C-9352388D5A47}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SparcpointUniversity.Console", "SparcpointUniversity.Console\SparcpointUniversity.Console.csproj", "{73B2D3BF-E032-41F4-AC0C-9352388D5A47}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SparcpointUniversity.Sql.Abstractions", "SparcpointUniversity.Sql.Abstractions\SparcpointUniversity.Sql.Abstractions.csproj", "{752F3801-46DA-4D6E-A202-8CA393DD46FB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SparcpointUniversity.Sql.SqlServer", "SparcpointUniversity.Sql.SqlServer\SparcpointUniversity.Sql.SqlServer.csproj", "{D11FA5B3-3609-4E16-8EF9-36A4D68A0B94}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SparcpointUniversity.Extensions.Sql", "SparcpointUniversity.Extensions.Sql\SparcpointUniversity.Extensions.Sql.csproj", "{532CA5A6-C761-4E27-A32D-8EBAB4AD5342}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,6 +29,18 @@ Global
 		{73B2D3BF-E032-41F4-AC0C-9352388D5A47}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{73B2D3BF-E032-41F4-AC0C-9352388D5A47}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{73B2D3BF-E032-41F4-AC0C-9352388D5A47}.Release|Any CPU.Build.0 = Release|Any CPU
+		{752F3801-46DA-4D6E-A202-8CA393DD46FB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{752F3801-46DA-4D6E-A202-8CA393DD46FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{752F3801-46DA-4D6E-A202-8CA393DD46FB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{752F3801-46DA-4D6E-A202-8CA393DD46FB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D11FA5B3-3609-4E16-8EF9-36A4D68A0B94}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D11FA5B3-3609-4E16-8EF9-36A4D68A0B94}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D11FA5B3-3609-4E16-8EF9-36A4D68A0B94}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D11FA5B3-3609-4E16-8EF9-36A4D68A0B94}.Release|Any CPU.Build.0 = Release|Any CPU
+		{532CA5A6-C761-4E27-A32D-8EBAB4AD5342}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{532CA5A6-C761-4E27-A32D-8EBAB4AD5342}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{532CA5A6-C761-4E27-A32D-8EBAB4AD5342}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{532CA5A6-C761-4E27-A32D-8EBAB4AD5342}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

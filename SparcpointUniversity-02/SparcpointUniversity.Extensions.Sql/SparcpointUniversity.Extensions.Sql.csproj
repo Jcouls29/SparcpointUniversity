@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="5.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\SparcpointUniversity.Sql.Abstractions\SparcpointUniversity.Sql.Abstractions.csproj" />
+    <ProjectReference Include="..\SparcpointUniversity.Sql.SqlServer\SparcpointUniversity.Sql.SqlServer.csproj" />
+  </ItemGroup>
+
+</Project>
