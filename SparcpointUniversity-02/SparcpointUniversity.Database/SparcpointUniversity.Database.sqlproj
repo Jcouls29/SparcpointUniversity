@@ -58,9 +58,11 @@
     <Folder Include="Properties" />
     <Folder Include="dbo" />
     <Folder Include="dbo\Tables" />
+    <Folder Include="dbo\Table Types" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="dbo\Tables\Products.sql" />
     <Build Include="dbo\Tables\ProductAttributes.sql" />
+    <Build Include="dbo\Table Types\StringKeyValueList.sql" />
   </ItemGroup>
 </Project>

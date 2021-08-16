@@ -24,44 +24,33 @@ namespace SparcpointUniversity.Console
             // NOTE: Additional checks should be performed on the product properties
             // before attempting to insert into SQL
 
-            const string SQL_PRODUCT = @"
+            const string SQL = @"
                 INSERT INTO [dbo].[Products] ([Name], [Description])
                 VALUES (@Name, @Description)
                 ;
-                SELECT CAST(SCOPE_IDENTITY() AS INT)
+                DECLARE @ProductId INT = SCOPE_IDENTITY();
+                ;
+                INSERT INTO [dbo].[ProductAttributes] ([ProductId], [Key], [Value])
+                SELECT @ProductId, [Key], [Value]
+                FROM @ProductAttributes
+                ;
+                SELECT @ProductId
                 ;
             ";
 
-            const string SQL_ATTR = @"
-                INSERT INTO [dbo].[ProductAttributes] ([ProductId], [Key], [Value])
-                VALUES (@ProductId, @Key, @Value)
-                ;
-            ";
+            if (product.Attributes == null)
+                product.Attributes = new System.Collections.Generic.Dictionary<string, string>();
 
             return await _Executor
                 .WithTransaction()
                 .ExecuteAsync(async (sqlConn, sqlTrans) =>
                 {
-                    int productId = await sqlConn.QuerySingleAsync<int>(SQL_PRODUCT, new
+                    return await sqlConn.QuerySingleAsync<int>(SQL, new
                     {
                         product.Name,
-                        Description = product.Description ?? ""
+                        Description = product.Description ?? "",
+                        ProductAttributes = product.Attributes.ToSqlParameter()
                     }, sqlTrans);
-
-                    if (product.Attributes?.Any() ?? false)
-                    {
-                        foreach (var keyValue in product.Attributes)
-                        {
-                            await sqlConn.ExecuteAsync(SQL_ATTR, new
-                            {
-                                ProductId = productId,
-                                Key = keyValue.Key,
-                                Value = keyValue.Value
-                            }, sqlTrans);
-                        }
-                    }
-
-                    return productId;
                 });
         }
     }
