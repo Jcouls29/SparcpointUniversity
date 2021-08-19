@@ -1,4 +1,5 @@
-﻿using Microsoft.Extensions.DependencyInjection;
+﻿using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
 using SparcpointUniversity.Sql.Abstractions;
 using SparcpointUniversity.Sql.SqlServer;
 using System;
@@ -11,8 +12,12 @@ namespace SparcpointUniversity.Console
     {
         static async Task Main(string[] args)
         {
+            IConfiguration config = new ConfigurationBuilder()
+                .AddJsonFile("appSettings.json")
+                .Build();
+
             // Configure IoC Container as if we were using a Web API (startup.cs / ConfigureServices)
-            IServiceProvider provider = Configure();
+            IServiceProvider provider = Configure(config);
             IProductRepository repository = provider.GetRequiredService<IProductRepository>();
 
             // Insert Products
@@ -43,11 +48,16 @@ namespace SparcpointUniversity.Console
             System.Console.ReadLine();
         }
 
-        static IServiceProvider Configure()
+        static IServiceProvider Configure(IConfiguration config)
         {
             IServiceCollection services = new ServiceCollection();
 
             services.AddSqlServerExecutor("Server=localhost;Database=MyDatabase;Integrated Security=True;");
+
+            var monitoringEnabledValue = config["Monitoring:SqlExecutor"];
+            if (bool.TryParse(monitoringEnabledValue, out bool isMonitoringEnabled) && isMonitoringEnabled)
+                services.AddPerformanceMonitoring((elapsed) => System.Console.Write($"[Elapsed Time: {elapsed}] "));
+
             services.AddSingleton<IProductRepository, SqlProductRepository>();
 
             return services.BuildServiceProvider();

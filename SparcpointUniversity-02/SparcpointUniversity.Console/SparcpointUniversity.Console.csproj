@@ -11,6 +11,8 @@
 
   <ItemGroup>
     <PackageReference Include="Dapper" Version="2.0.90" />
+    <PackageReference Include="Microsoft.Extensions.Configuration" Version="5.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="5.0.0" />
     <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="5.0.2" />
     <PackageReference Include="System.Data.SqlClient" Version="4.8.2" />
   </ItemGroup>
@@ -19,6 +21,12 @@
     <ProjectReference Include="..\SparcpointUniversity.Extensions.Sql\SparcpointUniversity.Extensions.Sql.csproj" />
     <ProjectReference Include="..\SparcpointUniversity.Sql.Abstractions\SparcpointUniversity.Sql.Abstractions.csproj" />
     <ProjectReference Include="..\SparcpointUniversity.Sql.SqlServer\SparcpointUniversity.Sql.SqlServer.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="appSettings.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 
 </Project>

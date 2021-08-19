@@ -9,5 +9,12 @@ namespace Microsoft.Extensions.DependencyInjection
     {
         public static IServiceCollection AddSqlServerExecutor(this IServiceCollection services, string connectionString)
             => services.AddSingleton<ISqlExecutor>(new SqlServerSqlExecutor(connectionString));
+
+        public static IServiceCollection AddPerformanceMonitoring(this IServiceCollection services, Action<TimeSpan> callback)
+        {
+            services.Decorate<ISqlExecutor, PerformanceMonitoringSqlExecutor>();
+            services.AddSingleton(new PerformanceMonitoringSqlExecutor.OnMonitorComplete(callback));
+            return services;
+        }
     }
 }
