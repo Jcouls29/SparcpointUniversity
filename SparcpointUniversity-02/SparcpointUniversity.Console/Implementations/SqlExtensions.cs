@@ -6,9 +6,9 @@ namespace SparcpointUniversity.Console
 {
     internal static class SqlExtensions
     {
-        public static ICustomQueryParameter ToSqlParameter(this Dictionary<string, string> value)
+        public static DataTable ToDataTable(this Dictionary<string, string> value)
         {
-            DataTable ut = new DataTable("StringKeyValueList");
+            DataTable ut = new DataTable("[dbo].[StringKeyValueList]");
 
             ut.Columns.Add("Key", typeof(string));
             ut.Columns.Add("Value", typeof(string));
@@ -16,7 +16,10 @@ namespace SparcpointUniversity.Console
             foreach (var kv in value)
                 ut.Rows.Add(kv.Key, kv.Value);
 
-            return ut.AsTableValuedParameter("[dbo].[StringKeyValueList]");
+            return ut;
         }
+
+        public static ICustomQueryParameter ToSqlParameter(this Dictionary<string, string> value)
+            => value.ToDataTable().AsTableValuedParameter("[dbo].[StringKeyValueList]");
     }
 }

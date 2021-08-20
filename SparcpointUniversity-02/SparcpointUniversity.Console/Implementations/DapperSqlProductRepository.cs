@@ -7,11 +7,11 @@ using Dapper;
 
 namespace SparcpointUniversity.Console
 {
-    public class SqlProductRepository : IProductRepository
+    public class DapperSqlProductRepository : IProductRepository
     {
         private readonly ISqlExecutor _Executor;
 
-        public SqlProductRepository(ISqlExecutor executor)
+        public DapperSqlProductRepository(ISqlExecutor executor)
         {
             _Executor = executor ?? throw new ArgumentNullException(nameof(executor));
         }
